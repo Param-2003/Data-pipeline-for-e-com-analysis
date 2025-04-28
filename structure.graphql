@@ -1,0 +1,23 @@
+ecommerce-customer-behavior-analytics/
+│
+├── kafka_producer/
+│   └── simulate_clickstream.py          # Simulates clickstream events and pushes to Kafka
+│
+├── glue_jobs/
+│   └── transform_clean_sales_data.py    # Cleans and filters incoming events using AWS Glue (PySpark)
+│
+├── redshift_queries/
+│   ├── schema.sql                        # Redshift schema for cleaned clickstream table
+│   └── sales_analysis_queries.sql        # Example queries to analyze sales and conversion rates
+│
+├── airflow_dags/
+│   └── clickstream_pipeline_dag.py       # Airflow DAG to automate the Glue job
+│
+├── dashboards/
+│   └── looker_dashboard_snapshots/       # (Optional) Save screenshots of Looker dashboard views here
+│
+├── architecture_diagram.png              # (Optional) Architecture diagram showing Kafka -> S3 -> Glue -> Redshift -> Looker
+│
+├── README.md                             # Detailed project explanation, instructions, highlights
+│
+└── requirements.txt                      # Python library dependencies (kafka-python, boto3 if needed, etc.)
