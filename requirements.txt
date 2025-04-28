@@ -1,0 +1,6 @@
+pandas
+matplotlib
+seaborn
+kafka-python
+boto3
+psycopg2-binary
